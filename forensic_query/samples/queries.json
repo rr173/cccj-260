@@ -1,0 +1,7 @@
+{
+  "queries": [
+    {"position": 250, "key": "balance"},
+    {"position": 600, "key": "balance"},
+    {"position": 405, "key": "balance"}
+  ]
+}

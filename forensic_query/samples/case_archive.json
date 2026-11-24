@@ -1,0 +1,35 @@
+{
+  "history": {"lo": 0, "hi": 1000000000000},
+  "keys": ["balance", "owner", "risk_flag", "memo"],
+  "snapshot": {
+    "position": 999999999999,
+    "values": {"balance": 4200, "owner": "alice", "risk_flag": null}
+  },
+  "checks": [
+    {"id": "chk-001", "position": 100, "key": "balance", "value": 1000},
+    {"id": "chk-002", "position": 200, "key": "owner", "value": "alice"},
+    {"id": "chk-003", "position": 300, "key": "risk_flag", "value": null},
+    {"id": "chk-004", "position": 350, "key": "memo", "value": "note-A"},
+    {"id": "chk-005", "position": 360, "key": "memo", "value": "note-B"}
+  ],
+  "writes": [
+    {"id": "w-010", "position": 500, "key": "balance", "before": 1000, "after": 2500},
+    {"id": "w-011", "position": 900, "key": "balance", "before": 2500, "after": 4200},
+    {"id": "w-020", "position": 700, "key": "owner", "after": "alice"}
+  ],
+  "gaps": [
+    {"id": "gap-A", "range": {"a": 400, "b": 410}, "keys": ["balance", "memo"]},
+    {"id": "gap-B", "range": {"a": 800000000000, "b": 800000000005}, "keys": null}
+  ],
+  "queries": [
+    {"position": 250, "key": "balance"},
+    {"position": 600, "key": "balance"},
+    {"position": 405, "key": "balance"},
+    {"position": 409, "key": "balance"},
+    {"position": 250, "key": "owner"},
+    {"position": 355, "key": "memo"},
+    {"position": 123, "key": "risk_flag"},
+    {"position": 800000000002, "key": "owner"},
+    {"position": 999999999999, "key": "balance"}
+  ]
+}
