@@ -1,0 +1,13 @@
+{
+  "base": 1,
+  "changes": [
+    {"op": "add", "volume": {
+      "volume_id": "acct-audit-fix",
+      "group": "grp-account",
+      "range": {"a": 800, "b": 950},
+      "writes": [
+        {"position": 900, "key": "balance", "before": 2500, "after": 4300}
+      ]
+    }}
+  ]
+}

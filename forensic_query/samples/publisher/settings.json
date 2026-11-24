@@ -1,0 +1,16 @@
+{
+  "history": {"lo": 0, "hi": 1000000000000},
+  "keys": ["balance", "owner", "risk_flag", "memo"],
+  "groups": {
+    "grp-account": ["balance", "risk_flag"],
+    "grp-profile": ["owner", "memo"]
+  },
+  "snapshot": {
+    "position": 999999999999,
+    "values": {"balance": 4200, "owner": "alice", "risk_flag": null}
+  },
+  "checks": [
+    {"id": "chk-001", "position": 100, "key": "balance", "value": 1000},
+    {"id": "chk-002", "position": 200, "key": "owner", "value": "alice"}
+  ]
+}

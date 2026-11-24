@@ -1,0 +1,30 @@
+{
+  "base": 0,
+  "changes": [
+    {"op": "add", "volume": {
+      "volume_id": "acct-2024-w1",
+      "group": "grp-account",
+      "range": {"a": 1, "b": 600},
+      "writes": [
+        {"position": 500, "key": "balance", "before": 1000, "after": 2500}
+      ]
+    }},
+    {"op": "add", "volume": {
+      "volume_id": "acct-2024-w2",
+      "group": "grp-account",
+      "range": {"a": 400, "b": 900000000000},
+      "writes": [
+        {"position": 500, "key": "balance", "after": 2500},
+        {"position": 900, "key": "balance", "before": 2500, "after": 4200}
+      ]
+    }},
+    {"op": "add", "volume": {
+      "volume_id": "prof-01",
+      "group": "grp-profile",
+      "range": {"a": 1, "b": 1000000000000},
+      "writes": [
+        {"position": 700, "key": "owner", "after": "alice"}
+      ]
+    }}
+  ]
+}
